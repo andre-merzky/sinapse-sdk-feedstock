@@ -29,6 +29,9 @@ requirements:
     - quacc
     - rootstock
     - ddsim >=0.2.1
+    # conda-only component: Flux backend for RHAPSODY (no PyPI package;
+    # linux-only builds)
+    - flux-core
 
 # meta-package installs no module of its own, so no import test
 tests:
