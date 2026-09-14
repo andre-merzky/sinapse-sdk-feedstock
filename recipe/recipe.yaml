@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.1.0"
+  version: "0.1.1"
 
 package:
   name: sinapse-sdk
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/sinapse-sdk/sinapse_sdk-${{ version }}.tar.gz
-  sha256: 0cdc05a3df283749c11d4127b49d936cd4ffedfd66fdab4fa6e9410c5f734c42
+  sha256: df6137af9ff98df8d001801b6063bd13c917b20762ce708ef8e749e89f5264cf
 
 build:
   number: 0
@@ -28,6 +28,10 @@ requirements:
     - radical.asyncflow >=0.5.0
     - quacc
     - rootstock
+    - ddsim >=0.2.1
+    # conda-only component: Flux backend for RHAPSODY (no PyPI package;
+    # linux-only builds)
+    - flux-core
 
 # meta-package installs no module of its own, so no import test
 tests:
